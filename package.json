@@ -4,17 +4,21 @@
   "description": "Unruly Robot",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "start": "budo index.js:bundle.js --live",
+    "build": "browserify index.js | uglifyjs -cm > bundle.js"
   },
-  "repository" :
-  { "type" : "git"
-  , "url" : "https://github.com/mfolsom/unruly.git"
-  }
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mfolsom/unruly.git"
+  },
   "author": "Megan Folsom",
   "license": "ISC",
   "devDependencies": {
     "browserify": "^16.2.2",
     "budo": "^11.2.2",
     "uglify-js": "^3.3.26"
+  },
+  "dependencies": {
+    "three": "^0.92.0"
   }
 }
